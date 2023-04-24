@@ -4,6 +4,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   distDir: 'docs',
+  basePath: '/clientside-download-demo',
 }
 
 module.exports = nextConfig
