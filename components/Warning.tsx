@@ -13,13 +13,13 @@ export default function Warning(props: WarningProps) {
     <div
       className={classNames(
         'bg-amber-100 border-l-8 border-l-amber-300',
-        'flex items-center text-lg',
+        'flex items-center text-sm md:text-base lg:text-lg',
         props.className,
       )}
     >
       <FontAwesomeIcon
         icon={warningIcon}
-        className="text-amber-300 ml-4 w-8 h-8"
+        className="text-amber-300 ml-4 w-6 h-6 lg:w-8 lg:h-8"
       />{' '}
       <p className="flex-grow pl-4 pr-10 py-6">
         Quick & dirty demo illustrating 100% client-side file download

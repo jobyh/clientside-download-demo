@@ -10,6 +10,7 @@ import DownloadButton from '@/components/DownloadButton'
 import ContentInput from '@/components/ContentInput'
 import FilenameInput from '@/components/FilenameInput'
 import Warning from '@/components/Warning'
+import SourceLink from '@/components/SourceLink'
 
 export default function Home() {
   const linkContainer = useRef<HTMLDivElement>(null)
@@ -56,30 +57,38 @@ export default function Home() {
   }
 
   return (
-    <div className="h-screen min-h-screen flex flex-col items-center text-xl">
-      <main className="flex-grow flex flex-col items-stretch gap-16 max-w-4xl">
-        <h1 className="sr-only">In Browser Download Demo</h1>
+    <div className="bg-dots w-screen min-h-screen">
+      <div className="flex flex-col items-stretch text-lg lg:text-xl max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
+        <main className="order-1 flex-grow flex flex-col gap-8 lg:gap-12">
+          <h1 className="sr-only">In Browser Download Demo</h1>
+          <Warning />
 
-        <Warning className="mt-10" />
+          <form className="flex flex-col">
+            <ContentInput markdown={content} onChange={handleContent} />
+          </form>
 
-        <form className="flex flex-col">
-          <ContentInput markdown={content} onChange={handleContent} />
-        </form>
+          <div className="flex flex-col lg:flex-row justify-end items-stretch gap-6 lg:gap-10">
+            <FilenameInput
+              className="flex-grow"
+              filename={filename}
+              onChange={handleFilename}
+            />
+            <DownloadButton
+              disabled={content === ''}
+              onClick={handleGenerate}
+              generating={generating}
+            />
+          </div>
+          <div ref={linkContainer}></div>
+        </main>
 
-        <div className="flex justify-end items-stretch gap-10">
-          <FilenameInput
-            className="flex-grow"
-            filename={filename}
-            onChange={handleFilename}
-          />
-          <DownloadButton
-            disabled={content === ''}
-            onClick={handleGenerate}
-            generating={generating}
-          />
-        </div>
-        <div ref={linkContainer}></div>
-      </main>
+        <footer className="my-6 flex justify-end lg:justify-between items-center">
+          <p className="text-xs hidden lg:block">
+            Built with Next.js | React | TypeScript | TailwindCSS
+          </p>
+          <SourceLink />
+        </footer>
+      </div>
     </div>
   )
 }

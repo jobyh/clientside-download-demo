@@ -15,6 +15,7 @@ export default function FilenameInput(props: FilenameInput) {
           'focus-within:ring-black focus-within:ring-[5px]',
           'flex-grow flex items-center justify-between',
           'h-full bg-white px-8 rounded-lg overflow-hidden',
+          'py-5',
         )}
       >
         <input

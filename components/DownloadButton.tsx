@@ -20,7 +20,7 @@ export default function DownloadButton({
       {...props}
       className={classNames(
         'flex items-center justify-center font-bold bg-white',
-        'rounded-lg px-16 py-6 text-2xl',
+        'rounded-lg px-16 py-6 text-xl lg:text-2xl',
         'focus:ring-focus-bg focus:ring-[5px]',
         'focus:outline-none active:scale-95',
         'disabled:opacity-60 disabled:active:scale-100',

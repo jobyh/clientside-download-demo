@@ -17,7 +17,7 @@ export default function ContentInput(props: ContentInputProps) {
         id="content"
         placeholder="Text content"
         className={classNames(
-          'text-2xl px-8 py-6 rounded-lg',
+          'text-lg md:text-xl lg:text-2xl px-8 py-6 rounded-lg',
           'focus:outline-none focus:ring-[5px]',
           'focus:ring-focus-bg',
         )}

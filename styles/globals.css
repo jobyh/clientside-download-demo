@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-dots {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" fill="black" fill-opacity="0.2"><rect x="40" y="0" width="10" height="10"></rect><rect x="10" y="30" width="10" height="10"></rect></svg>');
+    background-size: 6px;
+}
