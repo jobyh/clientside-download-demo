@@ -11,6 +11,7 @@ import ContentInput from '@/components/ContentInput'
 import FilenameInput from '@/components/FilenameInput'
 import Warning from '@/components/Warning'
 import SourceLink from '@/components/SourceLink'
+import Head from 'next/head'
 
 export default function Home() {
   const linkContainer = useRef<HTMLDivElement>(null)
@@ -58,6 +59,9 @@ export default function Home() {
 
   return (
     <div className="bg-dots w-screen min-h-screen">
+      <Head>
+        <title>Client Download Demo</title>
+      </Head>
       <div className="flex flex-col items-stretch text-lg lg:text-xl max-w-4xl mx-auto px-4 sm:px-6 md:px-8">
         <main className="order-1 flex-grow flex flex-col gap-8 lg:gap-12">
           <h1 className="sr-only">In Browser Download Demo</h1>
