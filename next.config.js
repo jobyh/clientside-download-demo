@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
-  trailingSlash: true,
   distDir: 'docs',
-  basePath: '/clientside-download-demo',
+  basePath:
+    process.env.NODE_ENV === 'production' ? '/clientside-download-demo' : '',
 }
 
 module.exports = nextConfig
