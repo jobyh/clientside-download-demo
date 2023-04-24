@@ -13,10 +13,7 @@ import Warning from '@/components/Warning'
 
 export default function Home() {
   const linkContainer = useRef<HTMLDivElement>(null)
-  const filenames = ['kiss-from-a-prose', 'textual-healing', 'you-texty-thing']
-  const [filename, setFilename] = React.useState(
-    filenames[Math.floor(Math.random() * filenames.length)],
-  )
+  const [filename, setFilename] = React.useState('textual-healing')
   const [content, setContent] = React.useState('')
   const [generating, setGenerating] = React.useState(false)
 
@@ -55,7 +52,7 @@ export default function Home() {
 
       reader.readAsDataURL(file)
       setGenerating(false)
-    }, 750)
+    }, 500)
   }
 
   return (
