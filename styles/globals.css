@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.markdown h1 {
+    @apply text-xl font-bold;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.markdown h2 {
+    @apply text-lg font-bold;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.markdown h3 {
+    @apply font-bold;
+}
+
+.markdown ul {
+    @apply list-disc list-inside;
+}
+
+.markdown blockquote {
+    @apply border-l-4 border-gray-300 bg-gray-100 py-3 pl-2;
 }
