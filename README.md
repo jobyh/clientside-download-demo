@@ -1,5 +1,9 @@
 # Clientside Download Demo
 
+I was asked at [Codebar](https://codebar.io) whether it's possible to generate
+a completely client-side file download, and this project demonstrates how that
+can be echieved.
+
 [**View the demo online**](https://jobyh.github.io/clientside-download-demo/)
 
 If you're interested in the download code check out the code around
